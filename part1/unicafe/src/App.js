@@ -25,6 +25,7 @@ const App = () => {
   const incrementNeutral = () => {setNeutral(neutral + 1)}
   const incrementBad = () => { setBad(bad + 1) }
   const total = good+bad+neutral;
+
   if(good+bad+neutral === 0){
     return(
       <div>
@@ -37,6 +38,7 @@ const App = () => {
         </div>
     )
   }
+  
   return (
     <div>
       <h1>Give feedback</h1>
