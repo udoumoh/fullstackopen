@@ -4,6 +4,7 @@ import Notes from "./components/Notes"
 import Notification from './components/Notification'
 import Footer from './components/Footer'
 
+
 const App = () => {
   const [notes, setNotes] = useState([])
   const [newNote, setNewNote] = useState("Add new note")
@@ -53,7 +54,6 @@ const toggleImportance = (id) => {
       setNewNote('')
     })
   }
-
     return(
     <>
         <div>
@@ -76,7 +76,6 @@ const toggleImportance = (id) => {
             <button type="submit">save</button>
           </form>
         </div>
-
         <Footer />
     </>
     )
