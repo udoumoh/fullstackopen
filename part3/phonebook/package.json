@@ -1,0 +1,36 @@
+{
+  "name": "part3",
+  "version": "1.0.0",
+  "description": "FSOpen Exercises",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:ui": "rm -rf build && cd ../fullstackopen/part2/notes/ && npm run build && cp -r build ../notes-backend",
+    "deploy": "git push heroku master",
+    "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udoumoh/Part3.git"
+  },
+  "author": "John Udoumoh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/udoumoh/Part3/issues"
+  },
+  "homepage": "https://github.com/udoumoh/Part3#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.5.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "nodemon": "^2.0.19"
+  }
+}
